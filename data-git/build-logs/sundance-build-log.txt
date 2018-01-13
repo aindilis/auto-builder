@@ -1,0 +1,117 @@
+andrewdo@ai:/var/lib/myfrdcsa/sandbox/sundance-4.37/sundance-4.37/sundance/scripts$ ./install_sundance
+../data/.nlp-opts exists. Overwrite it? [Y/N]
+y
+creating ../data/.nlp-opts
+../data/terror/.domain-spec exists. Overwrite it? [Y/N]
+y
+creating ../data/terror/.domain-spec
+../data/trec/.domain-spec exists. Overwrite it? [Y/N]
+y
+creating ../data/trec/.domain-spec
+../data/rcomp/.domain-spec exists. Overwrite it? [Y/N]
+y
+creating ../data/rcomp/.domain-spec
+../data/ieprojection/.domain-spec exists. Overwrite it? [Y/N]
+y
+creating ../data/ieprojection/.domain-spec
+../data/corpacq/.domain-spec exists. Overwrite it? [Y/N]
+y
+creating ../data/corpacq/.domain-spec
+../data/none/.domain-spec exists. Overwrite it? [Y/N]
+y
+creating ../data/none/.domain-spec
+../data/opinions/.domain-spec exists. Overwrite it? [Y/N]
+y
+creating ../data/opinions/.domain-spec
+../data/bio/.domain-spec exists. Overwrite it? [Y/N]
+y
+creating ../data/bio/.domain-spec
+../src/Makefile exists. Overwrite it? [Y/N]
+y
+creating ../src/Makefile
+g++ -Wall -Wno-deprecated -pipe -g -static -I../include -DHOME=\"/media/andrewdo/s3/sandbox/sundance-4.37/sundance-4.37/sundance/\" -c -fPIC -o shared/activation.o activation.C
+In file included from nlptypes.h:16:0,
+                 from activation.h:46,
+                 from activation.C:26:
+../include/sunstr.h: In constructor ‘sunstr::SRef::SRef(const char*)’:
+../include/sunstr.h:99:21: error: ‘strlen’ was not declared in this scope
+       len = strlen(C);
+                     ^
+../include/sunstr.h:102:20: error: ‘strcpy’ was not declared in this scope
+       strcpy(str, C);
+                    ^
+../include/sunstr.h: In member function ‘void sunstr::SRef::Assign(const char*)’:
+../include/sunstr.h:131:26: error: ‘strlen’ was not declared in this scope
+       if (len != strlen(C)) {
+                          ^
+../include/sunstr.h:136:19: error: ‘strcpy’ was not declared in this scope
+       strcpy(str,C);
+                   ^
+In file included from constituent.h:20:0,
+                 from sentence.h:19,
+                 from activation.C:27:
+../include/hash.h: In member function ‘virtual T& hashtable<T>::add(const char*, T&)’:
+../include/hash.h:150:38: error: there are no arguments to ‘strlen’ that depend on a template parameter, so a declaration of ‘strlen’ must be available [-fpermissive]
+       keys[ind] = new char[strlen(key)+1];   /* alloc mem for key */
+                                      ^
+../include/hash.h:150:38: note: (if you use ‘-fpermissive’, G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+../include/hash.h:152:28: error: there are no arguments to ‘strcpy’ that depend on a template parameter, so a declaration of ‘strcpy’ must be available [-fpermissive]
+       strcpy(keys[ind], key);     /* copy key */
+                            ^
+../include/hash.h: In member function ‘virtual T& hashtable<T>::Iterate(char**)’:
+../include/hash.h:305:51: error: there are no arguments to ‘strlen’ that depend on a template parameter, so a declaration of ‘strlen’ must be available [-fpermissive]
+       *PutKeyHere = new char[strlen(keys[tableind])+1];
+                                                   ^
+../include/hash.h:307:41: error: there are no arguments to ‘strcpy’ that depend on a template parameter, so a declaration of ‘strcpy’ must be available [-fpermissive]
+       strcpy(*PutKeyHere, keys[tableind]);
+                                         ^
+../include/hash.h: In member function ‘virtual void hashtable<T>::reset_and_resize(unsigned int)’:
+../include/hash.h:397:44: error: there are no arguments to ‘memset’ that depend on a template parameter, so a declaration of ‘memset’ must be available [-fpermissive]
+       memset(keys, 0, sizeof(char*)*maxsize);
+                                            ^
+../include/hash.h: In constructor ‘hashtable<T>::hashtable(unsigned int)’:
+../include/hash.h:419:44: error: there are no arguments to ‘memset’ that depend on a template parameter, so a declaration of ‘memset’ must be available [-fpermissive]
+       memset(keys, 0, sizeof(char*)*maxsize);
+                                            ^
+../include/hash.h: In copy constructor ‘hashtable<T>::hashtable(const hashtable<T>&)’:
+../include/hash.h:439:44: error: there are no arguments to ‘memset’ that depend on a template parameter, so a declaration of ‘memset’ must be available [-fpermissive]
+       memset(keys, 0, sizeof(char*)*maxsize);
+                                            ^
+../include/hash.h: In member function ‘virtual unsigned int hashtable<T>::hash(const char*, int)’:
+../include/hash.h:507:30: error: there are no arguments to ‘strlen’ that depend on a template parameter, so a declaration of ‘strlen’ must be available [-fpermissive]
+       int Length = strlen(key);
+                              ^
+../include/hash.h:532:62: error: there are no arguments to ‘strcmp’ that depend on a template parameter, so a declaration of ‘strcmp’ must be available [-fpermissive]
+    if ((keys[result]!=(char*)1) && (!strcmp(keys[result], key)))
+                                                              ^
+../include/hash.h: In member function ‘void hashtable<T>::ensure_we_have_enough_space(int)’:
+../include/hash.h:584:41: error: there are no arguments to ‘memset’ that depend on a template parameter, so a declaration of ‘memset’ must be available [-fpermissive]
+    memset(keys, 0, sizeof(char*)*maxsize);
+                                         ^
+../include/hash.h: In member function ‘virtual unsigned int hashLK<T>::hash(const char*, int)’:
+../include/hash.h:687:30: error: there are no arguments to ‘strlen’ that depend on a template parameter, so a declaration of ‘strlen’ must be available [-fpermissive]
+       int Length = strlen(key);
+                              ^
+../include/hash.h:701:25: error: ‘maxsize’ was not declared in this scope
+       result = result % maxsize;
+                         ^
+../include/hash.h:713:14: error: ‘keys’ was not declared in this scope
+       while (keys[result]!=0){
+              ^
+../include/hash.h:720:62: error: there are no arguments to ‘strcmp’ that depend on a template parameter, so a declaration of ‘strcmp’ must be available [-fpermissive]
+    if ((keys[result]!=(char*)1) && (!strcmp(keys[result], key)))
+                                                              ^
+../include/hash.h:742:35: error: there are no arguments to ‘ensure_we_have_enough_space’ that depend on a template parameter, so a declaration of ‘ensure_we_have_enough_space’ must be available [-fpermissive]
+      ensure_we_have_enough_space(1);
+                                   ^
+In file included from sentence.h:19:0,
+                 from activation.C:27:
+constituent.h: At global scope:
+constituent.h:131:9: error: extra qualification ‘Constituent::’ on member ‘getWordhelper’ [-fpermissive]
+   Word* Constituent::getWordhelper(unsigned int&, unsigned int) const;
+         ^
+Makefile:243: recipe for target 'shared/activation.o' failed
+make: *** [shared/activation.o] Error 1
+sundance installed
+
+andrewdo@ai:/var/lib/myfrdcsa/sandbox/sundance-4.37/sundance-4.37/sundance/scripts$ 

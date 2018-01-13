@@ -1,0 +1,1196 @@
+cd /var/lib/myfrdcsa/sandbox/seq-opt-hspsf-20170330/seq-opt-hspsf-20170330 && ./build
++ g++ -O6 -m32 -c -x c++ hsp_f.ccx
+hsp_f.ccx:5245:22: error: expected ‘;’ at end of member declaration
+   static const char* error_severity_string(ErrorSeverity s);
+                      ^
+hsp_f.ccx:5245:58: error: expected ‘)’ before ‘s’
+   static const char* error_severity_string(ErrorSeverity s);
+                                                          ^
+hsp_f.ccx:5252:3: error: ‘ErrorSeverity’ does not name a type
+   ErrorSeverity severity_of_error() const;
+   ^
+hsp_f.ccx:5260:17: error: ‘ErrorSeverity’ is not a member of ‘hsps::ExecError’
+ typedef svector<ExecError::ErrorSeverity> error_severity_set;
+                 ^
+hsp_f.ccx:5260:17: error: ‘ErrorSeverity’ is not a member of ‘hsps::ExecError’
+hsp_f.ccx:5260:41: error: template argument 1 is invalid
+ typedef svector<ExecError::ErrorSeverity> error_severity_set;
+                                         ^
+hsp_f.ccx:5260:61: error: invalid type in declaration before ‘;’ token
+ typedef svector<ExecError::ErrorSeverity> error_severity_set;
+                                                             ^
+hsp_f.ccx:5271:41: error: ‘hsps::ExecError::ErrorSeverity’ has not been declared
+   void ignore_error_severity(ExecError::ErrorSeverity s);
+                                         ^
+hsp_f.ccx:5277:14: error: ‘ErrorSeverity’ in ‘class hsps::ExecError’ does not name a type
+   ExecError::ErrorSeverity greatest_error_severity();
+              ^
+hsp_f.ccx:5283:17: error: expected ‘;’ at end of member declaration
+   ExecErrorSet* all_of_severity(ExecError::ErrorSeverity s);
+                 ^
+hsp_f.ccx:5283:58: error: expected ‘)’ before ‘s’
+   ExecErrorSet* all_of_severity(ExecError::ErrorSeverity s);
+                                                          ^
+hsp_f.ccx:5946:58: error: ‘hsps::ExecError::ErrorSeverity’ has not been declared
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                                          ^
+hsp_f.ccx:5946:72: error: conflicting declaration ‘int s’
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                                                        ^
+hsp_f.ccx:5946:44: note: previous declaration as ‘std::ostream& s’
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                            ^
+hsp_f.ccx:5946:73: error: ‘std::ostream& hsps::operator<<(std::ostream&)’ must take exactly two arguments
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                                                         ^
+hsp_f.ccx: In constructor ‘hsps::PDDL_Base::SetConstraint::SetConstraint()’:
+hsp_f.ccx:6678:64: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   sc_count(0), pos_atoms(0, 0), neg_atoms(0, 0), atom_sets(0, 0) { };
+                                                                ^
+hsp_f.ccx: In constructor ‘hsps::PDDL_Base::InvariantFormula::InvariantFormula(hsps::PDDL_Base::Formula*)’:
+hsp_f.ccx:6691:37: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       : DKEL_Item(":invariant"), f(g) { };
+                                     ^
+hsp_f.ccx: In constructor ‘hsps::PDDL_Base::IrrelevantItem::IrrelevantItem()’:
+hsp_f.ccx:6714:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     IrrelevantItem() : DKEL_Item(":irrelevant"), entity(0) { };
+                                                          ^
+hsp_f.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+hsp_f.ccx:2043:18:   required from here
+hsp_f.ccx:171:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+hsp_f.ccx:171:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+hsp_f.ccx:171:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ rational.ccx
+rational.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+rational.ccx:462:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+rational.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+rational.ccx:493:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+rational.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+rational.ccx:577:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+rational.ccx:601:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+rational.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+rational.ccx:644:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
++ g++ -O6 -m32 -c -x c++ index_type.ccx
++ g++ -O6 -m32 -c -x c++ name.ccx
++ g++ -O6 -m32 -c -x c++ ptr_table.ccx
++ g++ -O6 -m32 -c -x c++ char_map.ccx
++ g++ -O6 -m32 -c -x c++ string_table.ccx
++ g++ -O6 -m32 -c -x c++ numeric_type.ccx
+numeric_type.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+numeric_type.ccx:462:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+numeric_type.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+numeric_type.ccx:493:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+numeric_type.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+numeric_type.ccx:577:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+numeric_type.ccx:601:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+numeric_type.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+numeric_type.ccx:644:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+numeric_type.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+numeric_type.ccx:2125:18:   required from here
+numeric_type.ccx:821:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+numeric_type.ccx:821:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+numeric_type.ccx:821:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ graph.ccx
+graph.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+graph.ccx:1753:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+graph.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+graph.ccx:1782:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+graph.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+graph.ccx:1866:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+graph.ccx:1890:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+graph.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+graph.ccx:1933:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+graph.ccx: In member function ‘bool hsps::graph::equals(const hsps::graph&, const index_vec&) const’:
+graph.ccx:3369:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+graph.ccx: In member function ‘void hsps::graph::intersect(const hsps::graph&)’:
+graph.ccx:3741:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+graph.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+graph.ccx:2041:18:   required from here
+graph.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+graph.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+graph.ccx:169:34: note: use ‘this->inc_length_to’ instead
+graph.ccx: In instantiation of ‘void hsps::weighted_vec<T, N>::insert_increasing(const T&, const N&) [with T = unsigned int; N = hsps::rational]’:
+graph.ccx:4637:35:   required from here
+graph.ccx:1303:49: error: ‘insert_ordered’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+   insert_ordered(weighted<T,N>(v, w), increasing);
+                                                 ^
+graph.ccx:1303:49: note: declarations in dependent base ‘hsps::lvector<hsps::weighted<unsigned int, hsps::rational> >’ are not found by unqualified lookup
+graph.ccx:1303:49: note: use ‘this->insert_ordered’ instead
++ g++ -O6 -m32 -c -x c++ enumerators.ccx
++ g++ -O6 -m32 -c -x c++ rng.ccx
+rng.ccx: In member function ‘long unsigned int hsps::RNG::random_in_range(long unsigned int, long unsigned int)’:
+rng.ccx:1472:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
++ g++ -O6 -m32 -c -x c++ problem.ccx
+problem.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+problem.ccx:1753:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+problem.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+problem.ccx:1782:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+problem.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+problem.ccx:1866:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+problem.ccx:1890:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+problem.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+problem.ccx:1933:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+problem.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+problem.ccx:2041:18:   required from here
+problem.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+problem.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+problem.ccx:169:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ soft.ccx
+soft.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+soft.ccx:1753:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+soft.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+soft.ccx:1782:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+soft.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+soft.ccx:1866:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+soft.ccx:1890:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+soft.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+soft.ccx:1933:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+soft.ccx: At global scope:
+soft.ccx:5261:72: error: conflicting declaration ‘hsps::ExecError::ErrorSeverity s’
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                                                        ^
+soft.ccx:5261:44: note: previous declaration as ‘std::ostream& s’
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                            ^
+soft.ccx:5261:73: error: ‘std::ostream& hsps::operator<<(std::ostream&)’ must take exactly two arguments
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                                                         ^
+soft.ccx: In member function ‘virtual hsps::rational hsps::MaxNetBenefit::explore_next_option()’:
+soft.ccx:6124:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+soft.ccx:6135:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+soft.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+soft.ccx:2041:18:   required from here
+soft.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+soft.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+soft.ccx:169:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ search.ccx
+search.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+search.ccx:1753:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+search.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+search.ccx:1782:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+search.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+search.ccx:1866:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+search.ccx:1890:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+search.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+search.ccx:1933:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+search.ccx: In member function ‘virtual hsps::rational hsps::Transitions::new_state(hsps::State&, hsps::rational)’:
+search.ccx:2621:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+search.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+search.ccx:2041:18:   required from here
+search.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+search.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+search.ccx:169:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ heuristic.ccx
+heuristic.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+heuristic.ccx:1753:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+heuristic.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+heuristic.ccx:1782:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+heuristic.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+heuristic.ccx:1866:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+heuristic.ccx:1890:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+heuristic.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+heuristic.ccx:1933:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+heuristic.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+heuristic.ccx:2041:18:   required from here
+heuristic.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+heuristic.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+heuristic.ccx:169:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ stats.ccx
+stats.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+stats.ccx:462:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+stats.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+stats.ccx:493:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+stats.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+stats.ccx:577:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+stats.ccx:601:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+stats.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+stats.ccx:644:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+stats.ccx: In static member function ‘static double hsps::Stopwatch::seconds()’:
+stats.ccx:2736:30: error: ‘atoi’ was not declared in this scope
+   long vm = atoi(item.c_str()) / 1024;
+                              ^
+stats.ccx: In static member function ‘static void hsps::Stopwatch::interrupt_handler(int)’:
+stats.ccx:2779:40: error: ‘exit’ was not declared in this scope
+   if (interrupt_signal_raised) exit(255);
+                                        ^
+stats.ccx: In member function ‘virtual void hsps::Stopwatch::time_out()’:
+stats.ccx:2990:36: error: ‘exit’ was not declared in this scope
+   if (terminate_on_time_out) exit(0);
+                                    ^
+stats.ccx: In member function ‘virtual void hsps::Stopwatch::out_of_memory()’:
+stats.ccx:2998:41: error: ‘exit’ was not declared in this scope
+   if (terminate_on_out_of_memory) exit(0);
+                                         ^
+stats.ccx: In member function ‘virtual void hsps::Stopwatch::out_of_stack()’:
+stats.ccx:3006:40: error: ‘exit’ was not declared in this scope
+   if (terminate_on_out_of_stack) exit(0);
+                                        ^
+stats.ccx: In member function ‘virtual void hsps::Stopwatch::interrupt()’:
+stats.ccx:3014:37: error: ‘exit’ was not declared in this scope
+   if (terminate_on_interrupt) exit(0);
+                                     ^
+stats.ccx: In member function ‘virtual void hsps::Stopwatch::error()’:
+stats.ccx:3021:33: error: ‘exit’ was not declared in this scope
+   if (terminate_on_error) exit(0);
+                                 ^
+stats.ccx: In member function ‘virtual void hsps::Statistics::time_out()’:
+stats.ccx:3145:36: error: ‘exit’ was not declared in this scope
+   if (terminate_on_time_out) exit(0);
+                                    ^
+stats.ccx: In member function ‘virtual void hsps::Statistics::interrupt()’:
+stats.ccx:3153:37: error: ‘exit’ was not declared in this scope
+   if (terminate_on_interrupt) exit(0);
+                                     ^
+stats.ccx: In member function ‘virtual void hsps::Statistics::out_of_memory()’:
+stats.ccx:3161:41: error: ‘exit’ was not declared in this scope
+   if (terminate_on_out_of_memory) exit(0);
+                                         ^
+stats.ccx: In member function ‘virtual void hsps::Statistics::out_of_stack()’:
+stats.ccx:3169:40: error: ‘exit’ was not declared in this scope
+   if (terminate_on_out_of_stack) exit(0);
+                                        ^
+stats.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+stats.ccx:2125:18:   required from here
+stats.ccx:821:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+stats.ccx:821:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+stats.ccx:821:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ exec.ccx
+exec.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+exec.ccx:1753:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+exec.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+exec.ccx:1782:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+exec.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+exec.ccx:1866:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+exec.ccx:1890:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+exec.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+exec.ccx:1933:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+exec.ccx: At global scope:
+exec.ccx:4682:72: error: conflicting declaration ‘hsps::ExecError::ErrorSeverity s’
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                                                        ^
+exec.ccx:4682:44: note: previous declaration as ‘std::ostream& s’
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                            ^
+exec.ccx:4682:73: error: ‘std::ostream& hsps::operator<<(std::ostream&)’ must take exactly two arguments
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                                                         ^
+exec.ccx: In constructor ‘hsps::PDDL_Base::SetConstraint::SetConstraint()’:
+exec.ccx:6179:64: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   sc_count(0), pos_atoms(0, 0), neg_atoms(0, 0), atom_sets(0, 0) { };
+                                                                ^
+exec.ccx: In constructor ‘hsps::PDDL_Base::InvariantFormula::InvariantFormula(hsps::PDDL_Base::Formula*)’:
+exec.ccx:6192:37: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       : DKEL_Item(":invariant"), f(g) { };
+                                     ^
+exec.ccx: In constructor ‘hsps::PDDL_Base::IrrelevantItem::IrrelevantItem()’:
+exec.ccx:6215:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     IrrelevantItem() : DKEL_Item(":irrelevant"), entity(0) { };
+                                                          ^
+exec.ccx: In member function ‘virtual hsps::rational hsps::ExecState::expand(hsps::Search&, hsps::rational)’:
+exec.ccx:7105:11: error: ‘exit’ was not declared in this scope
+   exit(255);
+           ^
+exec.ccx: In member function ‘virtual void hsps::ExecState::store(hsps::rational, bool)’:
+exec.ccx:7110:11: error: ‘exit’ was not declared in this scope
+   exit(255);
+           ^
+exec.ccx: In member function ‘void hsps::ExecState::clip(hsps::rational)’:
+exec.ccx:7405:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+exec.ccx: In member function ‘virtual hsps::index_type hsps::BasicTimeline::interval_start_point(hsps::index_type)’:
+exec.ccx:7584:10: error: ‘exit’ was not declared in this scope
+  exit(255);
+          ^
+exec.ccx:7594:15: error: ‘exit’ was not declared in this scope
+       exit(255);
+               ^
+exec.ccx: In member function ‘virtual hsps::index_type hsps::BasicTimeline::interval_end_point(hsps::index_type)’:
+exec.ccx:7606:15: error: ‘exit’ was not declared in this scope
+       exit(255);
+               ^
+exec.ccx:7614:10: error: ‘exit’ was not declared in this scope
+  exit(255);
+          ^
+exec.ccx:7632:15: error: ‘exit’ was not declared in this scope
+       exit(255);
+               ^
+exec.ccx: In member function ‘virtual hsps::rational hsps::BasicTimeline::point_time(hsps::index_type)’:
+exec.ccx:7642:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+exec.ccx: In constructor ‘hsps::ResourceProfile::ResourceProfile(hsps::Instance&, hsps::index_type, hsps::ExecTrace&)’:
+exec.ccx:7678:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+exec.ccx: In member function ‘hsps::rational hsps::ResourceProfile::amount_available(hsps::index_type)’:
+exec.ccx:7740:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+exec.ccx: In member function ‘hsps::rational hsps::ResourceProfile::amount_in_use(hsps::index_type)’:
+exec.ccx:7750:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+exec.ccx: In member function ‘hsps::rational hsps::ResourceProfile::amount_free(hsps::index_type)’:
+exec.ccx:7768:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+exec.ccx: In member function ‘hsps::rational hsps::ResourceProfile::min_free_from(hsps::index_type)’:
+exec.ccx:7797:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+exec.ccx: In member function ‘virtual hsps::index_type hsps::ExecTrace::interval_start_point(hsps::index_type)’:
+exec.ccx:7984:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+exec.ccx: In member function ‘virtual hsps::index_type hsps::ExecTrace::interval_end_point(hsps::index_type)’:
+exec.ccx:7994:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+exec.ccx: In member function ‘virtual hsps::rational hsps::ExecTrace::point_time(hsps::index_type)’:
+exec.ccx:8010:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+exec.ccx:8020:15: error: ‘exit’ was not declared in this scope
+       exit(255);
+               ^
+exec.ccx: In member function ‘virtual hsps::rational hsps::ExecTrace::interval_start_time(hsps::index_type)’:
+exec.ccx:8033:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+exec.ccx: In member function ‘virtual hsps::rational hsps::ExecTrace::interval_end_time(hsps::index_type)’:
+exec.ccx:8043:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+exec.ccx: In member function ‘virtual void hsps::Schedule::insert(hsps::index_type)’:
+exec.ccx:8295:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+exec.ccx: In member function ‘virtual void hsps::Schedule::end()’:
+exec.ccx:8327:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+exec.ccx: In member function ‘void hsps::Schedule::reduce(hsps::ExecErrorSet*)’:
+exec.ccx:8341:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+exec.ccx: In member function ‘void hsps::Schedule::writeXML(std::ostream&, hsps::ExecErrorSet*, hsps::ExecTrace*, hsps::graph*, hsps::index_type) const’:
+exec.ccx:8618:15: error: ‘exit’ was not declared in this scope
+       exit(255);
+               ^
+exec.ccx: In member function ‘void hsps::ScheduleSet::add_distinguishing_traits_1()’:
+exec.ccx:9633:14: error: ‘exit’ was not declared in this scope
+      exit(255);
+              ^
+exec.ccx: In member function ‘virtual void hsps::PlanFeatureValue::write_short(std::ostream&) const’:
+exec.ccx:10316:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+exec.ccx: In member function ‘virtual void hsps::PlanFeatureValue::writeXML(std::ostream&) const’:
+exec.ccx:10347:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+exec.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+exec.ccx:2041:18:   required from here
+exec.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+exec.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+exec.ccx:169:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ plans.ccx
+plans.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+plans.ccx:1753:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+plans.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+plans.ccx:1782:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+plans.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+plans.ccx:1866:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+plans.ccx:1890:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+plans.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+plans.ccx:1933:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+plans.ccx: At global scope:
+plans.ccx:4792:72: error: conflicting declaration ‘hsps::ExecError::ErrorSeverity s’
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                                                        ^
+plans.ccx:4792:44: note: previous declaration as ‘std::ostream& s’
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                            ^
+plans.ccx:4792:73: error: ‘std::ostream& hsps::operator<<(std::ostream&)’ must take exactly two arguments
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                                                         ^
+plans.ccx: In constructor ‘hsps::PDDL_Base::SetConstraint::SetConstraint()’:
+plans.ccx:6376:64: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   sc_count(0), pos_atoms(0, 0), neg_atoms(0, 0), atom_sets(0, 0) { };
+                                                                ^
+plans.ccx: In constructor ‘hsps::PDDL_Base::InvariantFormula::InvariantFormula(hsps::PDDL_Base::Formula*)’:
+plans.ccx:6389:37: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       : DKEL_Item(":invariant"), f(g) { };
+                                     ^
+plans.ccx: In constructor ‘hsps::PDDL_Base::IrrelevantItem::IrrelevantItem()’:
+plans.ccx:6412:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     IrrelevantItem() : DKEL_Item(":irrelevant"), entity(0) { };
+                                                          ^
+plans.ccx: In member function ‘virtual void hsps::PrintAssoc::insert(hsps::index_type)’:
+plans.ccx:7257:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+plans.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+plans.ccx:2041:18:   required from here
+plans.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+plans.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+plans.ccx:169:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ preprocess.ccx
+preprocess.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+preprocess.ccx:1753:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+preprocess.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+preprocess.ccx:1782:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+preprocess.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+preprocess.ccx:1866:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+preprocess.ccx:1890:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+preprocess.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+preprocess.ccx:1933:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+preprocess.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+preprocess.ccx:2041:18:   required from here
+preprocess.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+preprocess.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+preprocess.ccx:169:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ cost_table.ccx
+cost_table.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+cost_table.ccx:1753:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+cost_table.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+cost_table.ccx:1782:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+cost_table.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+cost_table.ccx:1866:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+cost_table.ccx:1890:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+cost_table.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+cost_table.ccx:1933:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+cost_table.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+cost_table.ccx:2041:18:   required from here
+cost_table.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+cost_table.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+cost_table.ccx:169:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ additive.ccx
+additive.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+additive.ccx:1753:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+additive.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+additive.ccx:1782:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+additive.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+additive.ccx:1866:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+additive.ccx:1890:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+additive.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+additive.ccx:1933:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+additive.ccx: In member function ‘void hsps::AH::compute_with_iterative_assignment(const hsps::ACF&, const hsps::index_set&, hsps::index_set_vec&, bool, bool, const hsps::index_set&)’:
+additive.ccx:5149:10: error: ‘exit’ was not declared in this scope
+  exit(255);
+          ^
+additive.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+additive.ccx:2041:18:   required from here
+additive.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+additive.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+additive.ccx:169:34: note: use ‘this->inc_length_to’ instead
+additive.ccx: In instantiation of ‘void hsps::weighted_vec<T, N>::insert_increasing(const T&, const N&) [with T = hsps::comparable_pair<unsigned int>; N = hsps::rational]’:
+additive.ccx:5555:46:   required from here
+additive.ccx:1303:49: error: ‘insert_ordered’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+   insert_ordered(weighted<T,N>(v, w), increasing);
+                                                 ^
+additive.ccx:1303:49: note: declarations in dependent base ‘hsps::lvector<hsps::weighted<hsps::comparable_pair<unsigned int>, hsps::rational> >’ are not found by unqualified lookup
+additive.ccx:1303:49: note: use ‘this->insert_ordered’ instead
++ g++ -O6 -m32 -c -x c++ atomset.ccx
+atomset.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+atomset.ccx:1753:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+atomset.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+atomset.ccx:1782:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+atomset.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+atomset.ccx:1866:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+atomset.ccx:1890:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+atomset.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+atomset.ccx:1933:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+atomset.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+atomset.ccx:2041:18:   required from here
+atomset.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+atomset.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+atomset.ccx:169:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ resource.ccx
+resource.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+resource.ccx:1753:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+resource.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+resource.ccx:1782:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+resource.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+resource.ccx:1866:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+resource.ccx:1890:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+resource.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+resource.ccx:1933:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+resource.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+resource.ccx:2041:18:   required from here
+resource.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+resource.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+resource.ccx:169:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ seq_reg.ccx
+seq_reg.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+seq_reg.ccx:1753:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+seq_reg.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+seq_reg.ccx:1782:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+seq_reg.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+seq_reg.ccx:1866:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+seq_reg.ccx:1890:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+seq_reg.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+seq_reg.ccx:1933:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+seq_reg.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+seq_reg.ccx:2041:18:   required from here
+seq_reg.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+seq_reg.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+seq_reg.ccx:169:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ forward.ccx
+forward.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+forward.ccx:1753:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+forward.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+forward.ccx:1782:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+forward.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+forward.ccx:1866:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+forward.ccx:1890:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+forward.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+forward.ccx:1933:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+forward.ccx: At global scope:
+forward.ccx:5658:72: error: conflicting declaration ‘hsps::ExecError::ErrorSeverity s’
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                                                        ^
+forward.ccx:5658:44: note: previous declaration as ‘std::ostream& s’
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                            ^
+forward.ccx:5658:73: error: ‘std::ostream& hsps::operator<<(std::ostream&)’ must take exactly two arguments
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                                                         ^
+forward.ccx: In constructor ‘hsps::PDDL_Base::SetConstraint::SetConstraint()’:
+forward.ccx:6390:64: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   sc_count(0), pos_atoms(0, 0), neg_atoms(0, 0), atom_sets(0, 0) { };
+                                                                ^
+forward.ccx: In constructor ‘hsps::PDDL_Base::InvariantFormula::InvariantFormula(hsps::PDDL_Base::Formula*)’:
+forward.ccx:6403:37: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       : DKEL_Item(":invariant"), f(g) { };
+                                     ^
+forward.ccx: In constructor ‘hsps::PDDL_Base::IrrelevantItem::IrrelevantItem()’:
+forward.ccx:6426:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     IrrelevantItem() : DKEL_Item(":irrelevant"), entity(0) { };
+                                                          ^
+forward.ccx: In member function ‘virtual void hsps::SeqProgState::set_predecessor(hsps::State*)’:
+forward.ccx:7087:11: error: ‘exit’ was not declared in this scope
+   exit(255);
+           ^
+forward.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+forward.ccx:2041:18:   required from here
+forward.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+forward.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+forward.ccx:169:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ search_base.ccx
+search_base.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+search_base.ccx:1753:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+search_base.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+search_base.ccx:1782:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+search_base.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+search_base.ccx:1866:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+search_base.ccx:1890:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+search_base.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+search_base.ccx:1933:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+search_base.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+search_base.ccx:2041:18:   required from here
+search_base.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+search_base.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+search_base.ccx:169:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ hashtable.ccx
+hashtable.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+hashtable.ccx:1753:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+hashtable.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+hashtable.ccx:1782:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+hashtable.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+hashtable.ccx:1866:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+hashtable.ccx:1890:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+hashtable.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+hashtable.ccx:1933:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+hashtable.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+hashtable.ccx:2041:18:   required from here
+hashtable.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+hashtable.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+hashtable.ccx:169:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ ida.ccx
+ida.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+ida.ccx:1753:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+ida.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+ida.ccx:1782:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+ida.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+ida.ccx:1866:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+ida.ccx:1890:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+ida.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+ida.ccx:1933:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+ida.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+ida.ccx:2041:18:   required from here
+ida.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+ida.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+ida.ccx:169:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ nodeset.ccx
+nodeset.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+nodeset.ccx:1753:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+nodeset.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+nodeset.ccx:1782:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+nodeset.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+nodeset.ccx:1866:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+nodeset.ccx:1890:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+nodeset.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+nodeset.ccx:1933:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+nodeset.ccx: In member function ‘void hsps::Node::backup_costs(hsps::node_vec&)’:
+nodeset.ccx:2839:13: error: ‘exit’ was not declared in this scope
+     exit(255);
+             ^
+nodeset.ccx: In member function ‘void hsps::Node::write(std::ostream&, const hsps::Name*)’:
+nodeset.ccx:2855:36: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   state->write_eval(s, " H:", false);
+                                    ^
+nodeset.ccx: In member function ‘void hsps::Node::write_short(std::ostream&, const hsps::Name*)’:
+nodeset.ccx:2872:35: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   state->write_eval(s, " H:", true);
+                                   ^
+nodeset.ccx: In member function ‘void hsps::NodeQueue::check_queue()’:
+nodeset.ccx:2924:10: error: ‘exit’ was not declared in this scope
+  exit(255);
+          ^
+nodeset.ccx:2934:10: error: ‘exit’ was not declared in this scope
+  exit(255);
+          ^
+nodeset.ccx: In member function ‘hsps::State* hsps::NodeSet::build_path(hsps::node_vec&)’:
+nodeset.ccx:3037:15: error: ‘exit’ was not declared in this scope
+       exit(255);
+               ^
+nodeset.ccx: In member function ‘virtual hsps::rational hsps::NodeSetSearchState::expand(hsps::Search&, hsps::rational)’:
+nodeset.ccx:3254:10: error: ‘exit’ was not declared in this scope
+  exit(255);
+          ^
+nodeset.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+nodeset.ccx:2041:18:   required from here
+nodeset.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+nodeset.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+nodeset.ccx:169:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ bfs.ccx
+bfs.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+bfs.ccx:1753:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+bfs.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+bfs.ccx:1782:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+bfs.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+bfs.ccx:1866:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+bfs.ccx:1890:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+bfs.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+bfs.ccx:1933:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+bfs.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+bfs.ccx:2041:18:   required from here
+bfs.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+bfs.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+bfs.ccx:169:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ base.ccx
+base.ccx: In function ‘hsps::rational hsps::operator+(hsps::rational, hsps::rational)’:
+base.ccx:1939:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+base.ccx: In function ‘hsps::rational hsps::operator-(hsps::rational, hsps::rational)’:
+base.ccx:1968:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+base.ccx: In function ‘hsps::rational hsps::safeadd(hsps::rational, hsps::rational)’:
+base.ccx:2052:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+base.ccx:2076:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+base.ccx: In function ‘hsps::rational hsps::safemul(hsps::rational, hsps::rational)’:
+base.ccx:2119:8: error: ‘abort’ was not declared in this scope
+  abort();
+        ^
+base.ccx: At global scope:
+base.ccx:5447:72: error: conflicting declaration ‘hsps::ExecError::ErrorSeverity s’
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                                                        ^
+base.ccx:5447:44: note: previous declaration as ‘std::ostream& s’
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                            ^
+base.ccx:5447:73: error: ‘std::ostream& hsps::operator<<(std::ostream&)’ must take exactly two arguments
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                                                         ^
+base.ccx: In constructor ‘hsps::PDDL_Base::SetConstraint::SetConstraint()’:
+base.ccx:6179:64: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   sc_count(0), pos_atoms(0, 0), neg_atoms(0, 0), atom_sets(0, 0) { };
+                                                                ^
+base.ccx: In constructor ‘hsps::PDDL_Base::InvariantFormula::InvariantFormula(hsps::PDDL_Base::Formula*)’:
+base.ccx:6192:37: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       : DKEL_Item(":invariant"), f(g) { };
+                                     ^
+base.ccx: In constructor ‘hsps::PDDL_Base::IrrelevantItem::IrrelevantItem()’:
+base.ccx:6215:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     IrrelevantItem() : DKEL_Item(":irrelevant"), entity(0) { };
+                                                          ^
+base.ccx: In constructor ‘hsps::PDDL_Base::PDDL_Base(hsps::StringTable&)’:
+base.ccx:7088:52: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   dom_eq_pred->param.append(new VariableSymbol("?x"));
+                                                    ^
+base.ccx:7089:52: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   dom_eq_pred->param.append(new VariableSymbol("?y"));
+                                                    ^
+base.ccx:7092:56: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   dom_assign_pred->param.append(new VariableSymbol("?x"));
+                                                        ^
+base.ccx:7093:56: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   dom_assign_pred->param.append(new VariableSymbol("?y"));
+                                                        ^
+base.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+base.ccx:2227:18:   required from here
+base.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+base.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+base.ccx:169:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ parser.ccx
+parser.ccx:5449:72: error: conflicting declaration ‘hsps::ExecError::ErrorSeverity s’
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                                                        ^
+parser.ccx:5449:44: note: previous declaration as ‘std::ostream& s’
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                            ^
+parser.ccx:5449:73: error: ‘std::ostream& hsps::operator<<(std::ostream&)’ must take exactly two arguments
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                                                         ^
+parser.ccx: In constructor ‘hsps::PDDL_Base::SetConstraint::SetConstraint()’:
+parser.ccx:6181:64: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   sc_count(0), pos_atoms(0, 0), neg_atoms(0, 0), atom_sets(0, 0) { };
+                                                                ^
+parser.ccx: In constructor ‘hsps::PDDL_Base::InvariantFormula::InvariantFormula(hsps::PDDL_Base::Formula*)’:
+parser.ccx:6194:37: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       : DKEL_Item(":invariant"), f(g) { };
+                                     ^
+parser.ccx: In constructor ‘hsps::PDDL_Base::IrrelevantItem::IrrelevantItem()’:
+parser.ccx:6217:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     IrrelevantItem() : DKEL_Item(":irrelevant"), entity(0) { };
+                                                          ^
+parser.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+parser.ccx:2229:18:   required from here
+parser.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+parser.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+parser.ccx:169:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ grammar.ccx
+grammar.ccx:5447:72: error: conflicting declaration ‘hsps::ExecError::ErrorSeverity s’
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                                                        ^
+grammar.ccx:5447:44: note: previous declaration as ‘std::ostream& s’
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                            ^
+grammar.ccx:5447:73: error: ‘std::ostream& hsps::operator<<(std::ostream&)’ must take exactly two arguments
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                                                         ^
+grammar.ccx: In constructor ‘hsps::PDDL_Base::SetConstraint::SetConstraint()’:
+grammar.ccx:6179:64: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   sc_count(0), pos_atoms(0, 0), neg_atoms(0, 0), atom_sets(0, 0) { };
+                                                                ^
+grammar.ccx: In constructor ‘hsps::PDDL_Base::InvariantFormula::InvariantFormula(hsps::PDDL_Base::Formula*)’:
+grammar.ccx:6192:37: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       : DKEL_Item(":invariant"), f(g) { };
+                                     ^
+grammar.ccx: In constructor ‘hsps::PDDL_Base::IrrelevantItem::IrrelevantItem()’:
+grammar.ccx:6215:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     IrrelevantItem() : DKEL_Item(":irrelevant"), entity(0) { };
+                                                          ^
+grammar.ccx: In member function ‘int PDDL_Parser::yyparse()’:
+grammar.ccx:8048:37: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    log_error("parser stack overflow");
+                                     ^
+grammar.ccx:8606:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     log_error("undeclared variable in atom argument");
+                                                     ^
+grammar.ccx:9400:70: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     log_error("wrong number of arguments for predicate in (:init ...");
+                                                                      ^
+grammar.ccx:9416:76: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     log_error("wrong number of arguments for object function in (:init ...");
+                                                                            ^
+grammar.ccx:9433:69: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     log_error("wrong number of arguments for function in (:init ...");
+                                                                     ^
+grammar.ccx:9448:69: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     log_error("wrong number of arguments for function in (:init ...");
+                                                                     ^
+grammar.ccx:9639:44: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   current_item = new DKEL_Item(":invariant");
+                                            ^
+grammar.ccx:9809:44: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   current_item = new DKEL_Item(":invariant");
+                                            ^
+grammar.ccx:10453:60: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      log_error ("parse error; also virtual memory exceeded");
+                                                            ^
+grammar.ccx:10456:25: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  log_error("parse error");
+                         ^
+grammar.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+grammar.ccx:2227:18:   required from here
+grammar.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+grammar.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+grammar.ccx:169:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -c -x c++ scanner.ccx
+scanner.ccx:5449:72: error: conflicting declaration ‘hsps::ExecError::ErrorSeverity s’
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                                                        ^
+scanner.ccx:5449:44: note: previous declaration as ‘std::ostream& s’
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                            ^
+scanner.ccx:5449:73: error: ‘std::ostream& hsps::operator<<(std::ostream&)’ must take exactly two arguments
+ ::std::ostream& operator<<(::std::ostream& s, ExecError::ErrorSeverity s);
+                                                                         ^
+scanner.ccx: In constructor ‘hsps::PDDL_Base::SetConstraint::SetConstraint()’:
+scanner.ccx:6181:64: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   sc_count(0), pos_atoms(0, 0), neg_atoms(0, 0), atom_sets(0, 0) { };
+                                                                ^
+scanner.ccx: In constructor ‘hsps::PDDL_Base::InvariantFormula::InvariantFormula(hsps::PDDL_Base::Formula*)’:
+scanner.ccx:6194:37: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       : DKEL_Item(":invariant"), f(g) { };
+                                     ^
+scanner.ccx: In constructor ‘hsps::PDDL_Base::IrrelevantItem::IrrelevantItem()’:
+scanner.ccx:6217:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     IrrelevantItem() : DKEL_Item(":irrelevant"), entity(0) { };
+                                                          ^
+scanner.ccx: In member function ‘int PDDL_Scanner::next_token(yy_PDDL_Parser_stype&)’:
+scanner.ccx:8108:70: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   yy_fatal_error("fatal flex scanner internal error--no action found");
+                                                                      ^
+scanner.ccx: In member function ‘int PDDL_Scanner::yy_get_next_buffer()’:
+scanner.ccx:8120:74: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  yy_fatal_error("fatal flex scanner internal error--end of buffer missed");
+                                                                          ^
+scanner.ccx:8132:66: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      yy_fatal_error("fatal error - scanner input buffer overflow");
+                                                                  ^
+scanner.ccx:8133:153: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  if ( yy_input((char *)(&YY_CURRENT_BUFFER->yy_ch_buf[number_to_move]), yy_n_chars,num_to_read) < 0 ) yy_fatal_error("YY_INPUT() in flex scanner failed");;
+                                                                                                                                                         ^
+scanner.ccx: In member function ‘void PDDL_Scanner::yyunput(char, char*)’:
+scanner.ccx:8217:54: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      yy_fatal_error("flex scanner push-back overflow");
+                                                      ^
+scanner.ccx: In member function ‘int PDDL_Scanner::input()’:
+scanner.ccx:8254:79: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       yy_fatal_error("unexpected last match in YY_PDDL_Scanner_CLASS::input()");
+                                                                               ^
+scanner.ccx: In member function ‘yy_buffer_state* PDDL_Scanner::yy_create_buffer(FILE*, int)’:
+scanner.ccx:8293:75: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  yy_fatal_error("out of dynamic memory in YY_PDDL_Scanner_CREATE_BUFFER()");
+                                                                           ^
+scanner.ccx:8297:75: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  yy_fatal_error("out of dynamic memory in YY_PDDL_Scanner_CREATE_BUFFER()");
+                                                                           ^
+scanner.ccx: In instantiation of ‘typename std::vector<T>::reference hsps::auto_expanding_vector<T>::operator[](typename std::vector<T>::size_type) [with T = hsps::rational; typename std::vector<T>::reference = hsps::rational&; typename std::vector<T>::size_type = unsigned int]’:
+scanner.ccx:2229:18:   required from here
+scanner.ccx:169:34: error: ‘inc_length_to’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     inc_length_to(k + 1, _default);
+                                  ^
+scanner.ccx:169:34: note: declarations in dependent base ‘hsps::lvector<hsps::rational>’ are not found by unqualified lookup
+scanner.ccx:169:34: note: use ‘this->inc_length_to’ instead
++ g++ -O6 -m32 -o hsp_f hsp_f.o rational.o index_type.o name.o ptr_table.o char_map.o string_table.o numeric_type.o graph.o enumerators.o rng.o problem.o soft.o search.o heuristic.o stats.o exec.o plans.o preprocess.o cost_table.o additive.o atomset.o resource.o seq_reg.o forward.o search_base.o hashtable.o ida.o nodeset.o bfs.o base.o parser.o grammar.o scanner.o
+g++: error: hsp_f.o: No such file or directory
+g++: error: rational.o: No such file or directory
+g++: error: numeric_type.o: No such file or directory
+g++: error: graph.o: No such file or directory
+g++: error: rng.o: No such file or directory
+g++: error: problem.o: No such file or directory
+g++: error: soft.o: No such file or directory
+g++: error: search.o: No such file or directory
+g++: error: heuristic.o: No such file or directory
+g++: error: stats.o: No such file or directory
+g++: error: exec.o: No such file or directory
+g++: error: plans.o: No such file or directory
+g++: error: preprocess.o: No such file or directory
+g++: error: cost_table.o: No such file or directory
+g++: error: additive.o: No such file or directory
+g++: error: atomset.o: No such file or directory
+g++: error: resource.o: No such file or directory
+g++: error: seq_reg.o: No such file or directory
+g++: error: forward.o: No such file or directory
+g++: error: search_base.o: No such file or directory
+g++: error: hashtable.o: No such file or directory
+g++: error: ida.o: No such file or directory
+g++: error: nodeset.o: No such file or directory
+g++: error: bfs.o: No such file or directory
+g++: error: base.o: No such file or directory
+g++: error: parser.o: No such file or directory
+g++: error: grammar.o: No such file or directory
+g++: error: scanner.o: No such file or directory
